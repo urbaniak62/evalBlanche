@@ -12,8 +12,8 @@ $manager1=new Manager('crud');
 
 
 $vehicule=$manager1->select();
- var_dump($vehicule);
+
 
 require_once('../vue/indexVue.php');
-
+// require_once('oneVhl.php');
  ?>

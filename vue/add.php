@@ -7,6 +7,11 @@ include('header.php');
      <form class="col s12">
        <div class="row">
          <div class="input-field col s6">
+           <input name="type" type="text" class="validate">
+           <label for="first_name">type</label>
+         </div>
+       <div class="row">
+         <div class="input-field col s6">
            <input name="marque" type="text" class="validate">
            <label for="first_name">marque</label>
          </div>
@@ -27,6 +32,16 @@ include('header.php');
            <label>description</label>
          </div>
        </div>
+       <div class="row">
+         <div class="input-field col s6">
+           <input name="cylindre" type="text" class="validate">
+           <label for="first_name">cylindre</label>
+         </div>
+         <div class="row">
+           <div class="input-field col s6">
+             <input name="speed" type="text" class="validate">
+             <label for="first_name">vitesse max :</label>
+           </div>
        <div class="row">
          <div class="input-field col s6">
            <input name="prix" class="validate">

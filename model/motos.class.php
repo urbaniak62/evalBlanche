@@ -2,6 +2,7 @@
 require_once('pdo.php');
 
 require_once('vehicule.class.php');
+require_once('voiture.class.php');
 
 class Motos extends vehicule{
   private $_cylindre;
@@ -23,5 +24,8 @@ public function getSpeed(){
   return $this->_speed;
 }
 
+public function affiche(){
+echo $this->_cylindre .  $this->_speed;
+}
 }
 ?>

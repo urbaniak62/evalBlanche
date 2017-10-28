@@ -2,6 +2,7 @@
 require_once('pdo.php');
 
 require_once('vehicule.class.php');
+require_once('motos.class.php');
 
 class Voiture extends vehicule{
   private $_annee;
@@ -36,9 +37,9 @@ class Voiture extends vehicule{
         return $this;
     }
     public function affiche(){
-    echo $this->_type . " " . $this->_marque . " "
+    echo $this->_type .  $this->_marque
     . $this->_description . " " . $this->_price
-    .$this->_annee . $this_porte;
+    . $this->_annee . $this_porte;
   }
 
 }

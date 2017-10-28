@@ -7,10 +7,13 @@ include('header.php');
           <div class="card  light-blue darken-1">
             <div class="card-content white-text">
               <span class="card-title">type : <?php echo $vhl['type']; ?></span>
+              <p>marque : <?php echo $vhl['marque']; ?></p>
               <p>description : <?php echo $vhl['description']; ?></p>
-              <p>année : <?php echo $vhl['annee'] ?></p>
-              <p>nombre de porte : <?php echo $vhl['porte'] ?></p>
-              <p>prix  : <?php echo $vhl['prix'] ?></p>
+              <p>année : <?php echo $vhl['annee']; ?></p>
+              <p>nombre de porte : <?php echo $vhl['porte']; ?></p>
+              <p>cylindre : <?php echo $vhl['cylindre']; ?></p>
+              <p>vitesse max : <?php echo $vhl['speed']; ?></p>
+              <p>prix  : <?php echo $vhl['prix']; ?></p>
             </div>
             <div class="card-action">
               <a href="../controleur/oneVhlCont.php?id=<?php echo $vhl['id'] ?>">view all</a>
