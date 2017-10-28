@@ -30,7 +30,7 @@ class Manager{
   // --------------methode insert
   // ----------------------
 
-  public function insert(vehicule $insert_vehicule){
+  public function insert(vehicule $insert){
     $req=connection()-> prepare('INSERT INTO vehicule(type,description,marque,porte,annee,prix,cylindre,speed)
         VALUES(:type,:description,:marque,porte,annee,prix)');
 
@@ -77,6 +77,7 @@ public function delete($id){
   $vehicule=$req->fetchAll(PDO::FETCH_ASSOC);
   return $vehicule;
 }
+
 }
 
  ?>
