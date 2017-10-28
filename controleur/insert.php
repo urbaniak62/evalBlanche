@@ -15,7 +15,7 @@ $_POST['description'],$_POST['porte'],
 $_POST['annee'],$_POST['prix'],$_POST['cylindre'],$_POST['speed']);
 
 }
-$moto=$manager2->insert($insert);
+$moto=$manager2->insert('insert');
 
 var_dump($manager2);
 require_once('../vue/add.php');
