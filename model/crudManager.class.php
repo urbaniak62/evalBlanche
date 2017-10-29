@@ -2,7 +2,7 @@
 require_once('pdo.php');
 
 require_once('vehicule.class.php');
-
+require_once('motos.class.php');
 
 
 class Manager{
@@ -32,7 +32,7 @@ class Manager{
 
   public function insert(vehicule $insert){
     $req=connection()-> prepare('INSERT INTO vehicule(type,description,marque,porte,annee,prix,cylindre,speed)
-        VALUES(:type,:description,:marque,porte,annee,prix)');
+        VALUES(:type,:description,:marque,:porte,:annee,:prix,:cylindre,:speed)');
 
         $req->execute (array(
   'type'=>$insert->getType(),
@@ -60,7 +60,7 @@ class Manager{
 // ----------------------------------------
 
 public function selectByName($id){
-  $req=connection()->prepare('SELECT type,description,prix,annee,porte FROM vehicule WHERE id=:id');
+  $req=connection()->prepare('SELECT type,marque,description,prix,annee,porte FROM vehicule WHERE id=:id');
   $req->execute(array(
   'id'=>$id
 ));
