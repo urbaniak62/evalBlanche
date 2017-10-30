@@ -1,6 +1,6 @@
 <?php
 require_once('pdo.php');
-
+require_once('camion.class.php');
 require_once('vehicule.class.php');
 require_once('voiture.class.php');
 

@@ -1,6 +1,6 @@
 <?php
 require_once('pdo.php');
-
+require_once('camion.class.php');
 require_once('vehicule.class.php');
 require_once('motos.class.php');
 require_once('voiture.class.php');
@@ -53,6 +53,22 @@ class Manager{
   'prix'=>$insertM->getPrix()
   ));
   }
+
+// -----------------insertCamion
+// -------------------------------
+
+public function insertC($insertC){
+  $req=connection()-> prepare('INSERT INTO vehicule(type,description,marque,tonne,prix)
+      VALUES(:type,:description,:marque,:tonne,:prix)');
+
+      $req->execute (array(
+'type'=>$insertC->getType(),
+'marque'=>$insertC->getMarque(),
+'description'=>$insertC->getDescription(),
+'tonne'=>$insertC->getTonne(),
+'prix'=>$insertC->getPrix()
+));
+}
 
 // -------------------methode select all
 // -------------------------------------

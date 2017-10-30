@@ -15,6 +15,7 @@ include('header.php');
               <p>nombre de porte : <?php echo $vhl['porte']; ?></p>
               <p>cylindre : <?php echo $vhl['cylindre']; ?></p>
               <p>vitesse max : <?php echo $vhl['speed']; ?></p>
+              <p>poids  : <?php echo $vhl['tonne']; ?></p>
               <p>prix  : <?php echo $vhl['prix']; ?></p>
             </div>
             <div class="card-action">

@@ -10,11 +10,14 @@ include('header.php');
            <input name="type" type="text" class="validate">
            <label for="first_name">type</label>
          </div>
+       </div>
        <div class="row">
          <div class="input-field col s6">
            <input name="marque" type="text" class="validate">
            <label for="first_name">marque</label>
          </div>
+       </div>
+       <div class="row">
          <div class="input-field col s6">
            <input name="annee" type="text" class="validate">
            <label for="last_name">année</label>
@@ -41,6 +44,12 @@ include('header.php');
            <div class="input-field col s6">
              <input name="speed" type="text" class="validate">
              <label for="first_name">vitesse max :</label>
+           </div>
+           <div class="row">
+             <div class="input-field col s6">
+               <input name="tonne" type="text" class="validate">
+               <label for="porte">tonne</label>
+             </div>
            </div>
        <div class="row">
          <div class="input-field col s6">
