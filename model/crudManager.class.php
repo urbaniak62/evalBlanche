@@ -38,6 +38,21 @@ class Manager{
   'annee'=>$insert->getAnnee()
   ));
   }
+// -------------insertMotos
+// --------------------------------
+  public function insertM($insertM){
+    $req=connection()-> prepare('INSERT INTO vehicule(type,description,marque,cylindre,speed,prix)
+        VALUES(:type,:description,:marque,:cylindre,:speed,:prix)');
+
+        $req->execute (array(
+  'type'=>$insertM->getType(),
+  'marque'=>$insertM->getMarque(),
+  'description'=>$insertM->getDescription(),
+  'cylindre'=>$insertM->getCylindre(),
+  'speed'=>$insertM->getSpeed(),
+  'prix'=>$insertM->getPrix()
+  ));
+  }
 
 // -------------------methode select all
 // -------------------------------------
@@ -52,7 +67,7 @@ class Manager{
 // ----------------------------------------
 
 public function selectByName($id){
-  $req=connection()->prepare('SELECT type,marque,description,prix,annee,porte FROM vehicule WHERE id=:id');
+  $req=connection()->prepare('SELECT id,type,marque,description,prix,annee,cylindre,speed,porte FROM vehicule WHERE id=:id');
   $req->execute(array(
   'id'=>$id
 ));
@@ -62,7 +77,7 @@ public function selectByName($id){
 // -------------------methode delete
 // -------------------------------------
 public function delete($id){
-  $req=connection()->query('DELETE  FROM vehicule WHERE id=:id');
+  $req=connection()->prepare('DELETE  FROM vehicule WHERE id=:id');
   $req->execute(array(
     'id'=>$id
   ));
