@@ -10,11 +10,15 @@ require_once('../model/crudManager.class.php');
 
 $manager1=new Manager('crud');
 
+if (isset($_POST['delete'])) {
+var_dump($_POST);
+$manager1->delete($_GET['id']);
+}
 
-$vehicule=$manager1->delete($_GET['id']);
-var_dump($vehicule);
 
 
+require_once('../vue/indexVue.php');
 require_once('../vue/oneVhl.php');
+
 
  ?>

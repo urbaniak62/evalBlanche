@@ -4,7 +4,7 @@ require_once('pdo.php');
 require_once('vehicule.class.php');
 require_once('voiture.class.php');
 
-class Motos extends vehicule{
+class Motos extends Vehicule{
   private $_cylindre;
   private $_speed;
 

@@ -3,10 +3,10 @@ require_once('pdo.php');
 
 
 abstract class Vehicule{
-  private $_type;
-  private $_marque;
-  private $_description;
-  private $_price;
+  protected $type;
+  protected $marque;
+  protected $description;
+  protected $prix;
 
   // --------------------------------constructeur
 // --------------------------------------------
@@ -27,36 +27,36 @@ abstract class Vehicule{
 // ----------------setter
 // -----------------------
 public function setType($type){
-  $this->_type=$type;
+  $this->type=$type;
 }
 
   public function setMarque($marque){
-    $this->_marque=$marque;
+    $this->marque=$marque;
   }
 
   public function setDescription($description){
-  $this->_description=$description;
+  $this->description=$description;
 }
 
-public function setPrice($price){
-  $this->_price=$price;
+public function setPrix($prix){
+  $this->prix=$prix;
 }
 
 // --------------getter
 // ---------------------------
 public function getType(){
-  return $this->_type;
+  return $this->type;
 }
 
 
 public function getMarque(){
-  return $this->_marque;
+  return $this->marque;
 }
-public function getPrice(){
-  return $this->_price;
+public function getPrix(){
+  return $this->prix;
 }
 public function getDescription(){
-  return $this->_description;
+  return $this->description;
 }
 
 

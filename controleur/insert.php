@@ -6,19 +6,19 @@ require_once('../model/motos.class.php');
 require_once('../model/crudManager.class.php');
 
 $manager2=new Manager('crud');
-if (isset ($_POST['type']) && isset($_POST['marque']) && isset($_POST['description'])
-&& isset($_POST['porte']) && isset($_POST['annee']) && isset($_POST['prix'])
-&& isset($_post['cylindre']) && isset($_POST['speed'])) {
+// if (isset ($_POST['type']) && isset($_POST['marque']) && isset($_POST['description'])
+// && isset($_POST['porte']) && isset($_POST['annee']) && isset($_POST['prix'])
+// && isset($_post['cylindre']) && isset($_POST['speed'])) {
+  if (isset($_POST['type'])=='vehicule') {
+    var_dump($_POST);
+    $car=new Voiture($_POST);
+    var_dump($car);
+    $manager2->insert($car);
+  }
+  
 
-$moto=new Manager ($_POST['type'],$_POST['marque'],
-$_POST['description'],$_POST['porte'],
-$_POST['annee'],$_POST['prix'],$_POST['cylindre'],$_POST['speed']);
-}
-$moto=$manager2è>insert('insert');
-
-var_dump($moto);
 require_once('../vue/add.php');
-require_once('../indexVue.php');
+
 
 
 

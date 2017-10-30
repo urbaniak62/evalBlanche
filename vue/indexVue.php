@@ -2,6 +2,8 @@
 include('header.php');
  ?>
   <?php foreach ($vehicule as $vhl): ?>
+
+
  <div class="row ">
         <div class="col s12 m6">
           <div class="card  light-blue darken-1">
@@ -17,12 +19,16 @@ include('header.php');
             </div>
             <div class="card-action">
               <a href="../controleur/oneVhlCont.php?id=<?php echo $vhl['id'] ?>">view all</a>
-              <a href="../vue/add.php">add</a>
-              <a href="#">delete </a>
+              <a href="../controleur/insert.php">add</a>
+              <form class="" method="post">
+                <input type="submit" name="delete" value="delete">
+              </form>
             </div>
           </div>
         </div>
       </div>
+    </div>
+
 
       <?php endforeach; ?>
 

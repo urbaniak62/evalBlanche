@@ -3,17 +3,12 @@ require_once('pdo.php');
 
 require_once('vehicule.class.php');
 require_once('motos.class.php');
+require_once('voiture.class.php');
 
 
 class Manager{
   private $_crud;
 
-  // -------constructeur
-
-    public function __construct($crud){
-        $this->_crud=$crud;
-
-}
 
   // -------------setter
 // ----------------------------
@@ -30,20 +25,17 @@ class Manager{
   // --------------methode insert
   // ----------------------
 
-  public function insert(vehicule $insert){
-    $req=connection()-> prepare('INSERT INTO vehicule(type,description,marque,porte,annee,prix,cylindre,speed)
-        VALUES(:type,:description,:marque,:porte,:annee,:prix,:cylindre,:speed)');
+  public function insert($insert){
+    $req=connection()-> prepare('INSERT INTO vehicule(type,description,marque,porte,annee,prix)
+        VALUES(:type,:description,:marque,:porte,:annee,:prix)');
 
         $req->execute (array(
   'type'=>$insert->getType(),
-  'description'=>$insert->getDescription(),
   'marque'=>$insert->getMarque(),
+  'description'=>$insert->getDescription(),
   'porte'=>$insert->getPorte(),
-  'annee'=>$insert->getAnnee(),
   'prix'=>$insert->getPrix(),
-  'cylindre'=>$insert->getCylindre(),
-  'speed'=>$insert->getSpeed(),
-
+  'annee'=>$insert->getAnnee()
   ));
   }
 
@@ -70,12 +62,11 @@ public function selectByName($id){
 // -------------------methode delete
 // -------------------------------------
 public function delete($id){
-  $req=connection()->query('DELETE * FROM vehicule WHERE id=:id');
+  $req=connection()->query('DELETE  FROM vehicule WHERE id=:id');
   $req->execute(array(
     'id'=>$id
   ));
-  $vehicule=$req->fetchAll(PDO::FETCH_ASSOC);
-  return $vehicule;
+
 }
 
 }
