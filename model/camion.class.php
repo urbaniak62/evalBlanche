@@ -1,6 +1,6 @@
 <?php
 require_once('pdo.php');
-require_once('camion.class.php');
+
 require_once('vehicule.class.php');
 require_once('voiture.class.php');
 
@@ -13,6 +13,7 @@ class camion extends Vehicule{
 
   public function setTonne($tonne){
     $this->_tonne=$tonne;
+    
   }
 
 // ----------------getter

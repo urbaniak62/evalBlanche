@@ -1,10 +1,9 @@
 <?php
 require_once('pdo.php');
-require_once('camion.class.php');
 require_once('vehicule.class.php');
 require_once('motos.class.php');
 require_once('voiture.class.php');
-
+require_once('camion.class.php');
 
 class Manager{
   private $_crud;
@@ -83,7 +82,7 @@ public function insertC($insertC){
 // ----------------------------------------
 
 public function selectByName($id){
-  $req=connection()->prepare('SELECT id,type,marque,description,prix,annee,cylindre,speed,porte FROM vehicule WHERE id=:id');
+  $req=connection()->prepare('SELECT id,type,marque,description,prix,annee,tonne,cylindre,speed,porte FROM vehicule WHERE id=:id');
   $req->execute(array(
   'id'=>$id
 ));
@@ -99,6 +98,8 @@ public function delete($id){
   ));
 
 }
+// --------------------methode update
+// -------------------------------------
 
 }
 

@@ -1,1 +1,42 @@
+.tralala{
+  width: 80%;
+  margin: 45px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
+}
+
+.carte{
+  width: 400px;
+  margin:0;
+}
+@media screen and (max-width: 1000px) {
+  .tralala{
+    width:100%;
+  }
+  .material-icons{
+    display: none !important;
+  }
+  .right{
+    display: block !important;
+  }
+  .carte{
+    width:350px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .tralala{
+    width:100%;
+  }
+  .material-icons{
+    display: block !important;
+  }
+  .right{
+    display: none !important;
+  }
+  .carte{
+    width:350px;
+  }
+}

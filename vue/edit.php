@@ -2,6 +2,9 @@
 require_once('header.php')
 
  ?>
+ <form class="" method="post">
+
+ </form>
 <div class="row">
   <form class="col s12 ">
     <div class="row">

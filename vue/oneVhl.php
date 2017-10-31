@@ -13,7 +13,7 @@ include('header.php');
                 <p>nombre de porte : <?php echo $vehicule['porte']; ?></p>
                 <p>cylindre  : <?php echo $vehicule['cylindre']; ?></p>
                 <p>vitesse max  : <?php echo $vehicule['speed']; ?></p>
-                <p>prix  : <?php echo $vehicule['tonne']; ?></p>
+                <p>poids  : <?php echo $vehicule['tonne']; ?></p>
                 <p>prix  : <?php echo $vehicule['prix']; ?></p>
 
               </div>

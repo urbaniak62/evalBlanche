@@ -40,11 +40,13 @@ include('header.php');
            <input name="cylindre" type="text" class="validate">
            <label for="first_name">cylindre</label>
          </div>
+       </div>
          <div class="row">
            <div class="input-field col s6">
              <input name="speed" type="text" class="validate">
              <label for="first_name">vitesse max :</label>
            </div>
+         </div>
            <div class="row">
              <div class="input-field col s6">
                <input name="tonne" type="text" class="validate">

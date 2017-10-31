@@ -1,11 +1,11 @@
 <?php
 include('header.php');
  ?>
+
+  <div class="tralala">
   <?php foreach ($vehicule as $vhl): ?>
 
-
- <div class="row ">
-        <div class="col s12 m6">
+        <div class="row col s12 m6 carte">
           <div class="card  light-blue darken-1">
             <div class="card-content white-text">
               <span class="card-title">type : <?php echo $vhl['type']; ?></span>
@@ -28,11 +28,14 @@ include('header.php');
             </div>
           </div>
         </div>
+
+        <?php endforeach; ?>
       </div>
-    </div>
 
 
-      <?php endforeach; ?>
+
+
+
 
 
 
