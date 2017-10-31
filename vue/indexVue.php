@@ -21,6 +21,11 @@ include('header.php');
             <div class="card-action">
               <a href="../controleur/oneVhlCont.php?id=<?php echo $vhl['id'] ?>">view all</a>
               <a href="../controleur/insert.php">add</a>
+              <form class="" action="../controleur/update.php" method="post">
+                <input type="submit" value="update">
+                <input type="hidden" name="id" value="<?php echo $vhl['id']?>">
+              </form>
+
               <form class="" action="../controleur/delete.php"method="post">
                 <input type="hidden" name="id" value="<?php echo $vhl['id'] ?>">
                 <input type="submit" name="delete" value="delete">

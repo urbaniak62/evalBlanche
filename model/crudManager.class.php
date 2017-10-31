@@ -100,7 +100,23 @@ public function delete($id){
 }
 // --------------------methode update
 // -------------------------------------
+public function update($vehicule){
+  $req=connection()->prepare('vehicule SET type= :type,id = :id,
+  marque= :marque,annee = :annee,description = :description,
+  prix= :prix,cylindre= :cylindre,speed =:speed,porte =:porte WHERE id= :id');
+  $req-> execute(array(
+    'type'=>$vehicule->getType(),
+    'id'=>$vehicule->getId(),
+    'marque'=>$vehicule->getMarque(),
+    // 'annee'=>$vehicule->getAnnee(),
+    'description'=>$vehicule->getDescription(),
+    'prix'=>$vehicule->getPrix(),
+    'cylindre'=>$vehicule->getCylindre(),
+    'porte'=>$vehicule->getPorte(),
+    'speed'=>$vehicule->getSpeed()
 
+  ));
+}
 }
 
  ?>

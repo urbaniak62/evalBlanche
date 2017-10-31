@@ -5,8 +5,8 @@ require_once('vehicule.class.php');
 require_once('motos.class.php');
 
 class Voiture extends Vehicule{
-  private $_annee;
-  private $_porte;
+  private $annee;
+  private $porte;
 
 
 
@@ -14,29 +14,29 @@ class Voiture extends Vehicule{
   //-------------------------
     public function getAnnee()
     {
-        return $this->_annee;
+        return $this->$annee;
     }
     public function getPorte()
     {
-        return $this->_porte;
+        return $this->$porte;
     }
 
  // ---------------setters
  //---------------------------
-    public function setAnnee($_annee)
+    public function setAnnee($annee)
     {
-        $this->_annee = $annee;
+        $this->annee = $annee;
 
         return $this;
     }
 
-    public function setPorte($_porte)
+    public function setPorte($porte)
     {
-        $this->_porte = $porte;
+        $this->porte = $porte;
 
         return $this;
     }
-  
+
 
 }
 

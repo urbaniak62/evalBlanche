@@ -3,6 +3,7 @@ require_once('pdo.php');
 
 
 abstract class Vehicule{
+  protected $id;
   protected $type;
   protected $marque;
   protected $description;
@@ -26,6 +27,11 @@ abstract class Vehicule{
 
 // ----------------setter
 // -----------------------
+public function setId($id){
+  $this->id=$id;
+}
+
+
 public function setType($type){
   $this->type=$type;
 }
@@ -44,6 +50,10 @@ public function setPrix($prix){
 
 // --------------getter
 // ---------------------------
+public function getId(){
+  return $this->id;
+}
+
 public function getType(){
   return $this->type;
 }

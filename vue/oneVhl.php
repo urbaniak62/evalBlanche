@@ -18,11 +18,12 @@ include('header.php');
 
               </div>
               <div class="card-action">
-                <a href="#">view all</a>
+              <form class="" action="../controleur/delete.php"method="post">
+                <a href="../controleur/index.php">go back</a>
                 <a href="../vue/add.php">add</a>
-                <form class="" action="../controleur/delete.php"method="post">
+                <!-- <form class="" action="../controleur/delete.php"method="post"> -->
                   <input type="hidden" name="id" value="<?php echo $vehicule['id'] ?>">
-                  <input type="submit" name="delete" value="delete">
+                  <a href="#"><input type="submit" name="delete" value="delete"></a>
                 </form>
               </div>
             </div>
